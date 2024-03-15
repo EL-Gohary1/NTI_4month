@@ -1,5 +1,11 @@
 
 
+/***************************************************************
+       NAME    :EXTI_interface.h
+	   create  :03/03/2024 1:25:25 PM
+	   version :_v1_
+	   Author  :mahmoud elgohary
+****************************************************************/
 
 #include "EXTI_interface.h"
 #include "EXTI_register.h"
@@ -92,7 +98,7 @@ static void (*INT1_Fptr) (void)=NULLPTR;
 static void (*INT2_Fptr) (void)=NULLPTR;
 
 /************************************Call back functions*********************************************/
-void EXI_SetCallBack(EXTINT_Source_t copy_enum_InterruptSrc,void(*LocalPtr)(void))
+void EXI_voidSetCallBack(EXTINT_Source_t copy_enum_InterruptSrc,void(*LocalPtr)(void))
 {
 	switch(copy_enum_InterruptSrc){
 		case EX_INT0:

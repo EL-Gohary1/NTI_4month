@@ -1,13 +1,26 @@
 
-/*
- * Spi_private.h
- *
- * Created: 3/5/2024 9:26:59 AM
- *  Author: lenovo
- */ 
+
+/***************************************************************
+       NAME    :Spi_private.h
+	   create  :3/5/2024 9:26:59 AM
+	   version :_v1_
+	   Author  :mahmoud elgohary
+****************************************************************/
 
 #ifndef SPI_PRIVATE_H_
 #define SPI_PRIVATE_H_
+
+/******************************************************************************************************************************
+* \Syntax			: static void SPI_voidResieveNoBlocking(void);
+* \Description		: private function called in ISR to update SPI_u8RxData is static global variable
+*
+*	
+* \Sync\Async		: Synchronous
+* \Reenrancy    	: Reentrant
+* \Parameters (in)	: None
+* \Return value     : None                                           
+******************************************************************************************************************************/
+static void SPI_voidResieveNoBlocking(void);
 
 typedef struct{
 	volatile u8 SPCR;
